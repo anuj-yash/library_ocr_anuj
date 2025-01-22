@@ -10,8 +10,8 @@ afterEvaluate{
             release(MavenPublication) {
                 from components.findByName('release')
 
-                groupId = "com.ocr.new_ocr_lib"
-                artifactId = "new_ocr_lib"
+                groupId = "com.github.anuj-yash"
+                artifactId = "library_ocr_anuj"
                 version = "1.0.0"
             }
         }
