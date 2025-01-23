@@ -10,13 +10,28 @@ afterEvaluate{
             release(MavenPublication) {
                 from components.findByName('release')
 
-                groupId = "com.github.anuj-yash"
+                groupId = 'com.github.anuj-yash'
                 artifactId = "library_ocr_anuj"
                 version = "1.0.0"
             }
         }
     }
 }
+
+//afterEvaluate {
+//    android.libraryVariants.each {
+//        varient ->
+//            publishing.publications.create(varient.name, MavenPublication){
+//                from components.findByName(varient.name)
+//
+//                groupId = 'com.ocr.new_mylibrary'
+//                artifactId = 'library_ocr_anuj'
+//                version = '1.0.0'
+//            }
+//
+//    }
+//}
+
 
 android {
     namespace 'com.ocr.new_mylibrary'
@@ -36,8 +51,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
         jvmTarget = '1.8'
